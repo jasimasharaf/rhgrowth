@@ -158,7 +158,7 @@ export const workCategories = [
         title: "GOODFOOD.IN",
         category: "Food",
         tagline: "An Instagram profile concept created for a food business.",
-        profileScreenshot: "/assets/brand_projects.png",
+        profileScreenshot: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494836/mega2.jpg",
         whatWeCreated: [
           "Instagram profile setup",
           "Professional profile presentation",
@@ -175,7 +175,7 @@ export const workCategories = [
             id: "gf-1",
             title: "Instagram Profile Screenshot",
             type: "image",
-            mediaUrl: "/assets/brand_projects.png",
+            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494836/mega2.jpg",
             category: "Profile Screenshot",
             description: "Food profile presentation and highlight cover design for GOODFOOD.IN."
           },
