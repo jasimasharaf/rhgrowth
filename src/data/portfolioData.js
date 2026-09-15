@@ -127,29 +127,28 @@ export const workCategories = [
         ],
         gallery: [
           {
-            id: "th-1",
-            title: "Instagram Profile Screenshot & Grid",
+            id: "th-poster-1",
+            title: "Poster 01",
             type: "image",
-            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789495555/WhatsApp_Image_2026-09-15_at_9.57.23_AM.jpg",
-            category: "Profile Screenshot",
-            description: "Full Instagram page presentation for TECHHOUSE.IN."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Creative promotional poster for TECHHOUSE.IN."
           },
           {
-            id: "th-2",
-            title: "Electronics Offer Poster",
+            id: "th-poster-2",
+            title: "Poster 02",
             type: "image",
-            mediaUrl: "/assets/brand_projects.png",
-            category: "Posters & Creatives",
-            description: "Promotional poster for flagship electronics launch."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Social media poster creative for TECHHOUSE.IN."
           },
           {
-            id: "th-3",
-            title: "Gadget Feature Showcase Reel",
-            type: "video",
-            mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-            posterUrl: "/assets/instagram_projects.png",
-            category: "Reels & Videos",
-            description: "Short video showcasing gadget performance and features."
+            id: "th-poster-3",
+            title: "Poster 03",
+            type: "image",
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Promotional poster creative for TECHHOUSE.IN."
           }
         ]
       },
@@ -172,29 +171,28 @@ export const workCategories = [
         ],
         gallery: [
           {
-            id: "gf-1",
-            title: "Instagram Profile Screenshot",
+            id: "gf-poster-1",
+            title: "Poster 01",
             type: "image",
-            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494836/mega2.jpg",
-            category: "Profile Screenshot",
-            description: "Food profile presentation and highlight cover design for GOODFOOD.IN."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Food promotional poster for GOODFOOD.IN."
           },
           {
-            id: "gf-2",
-            title: "Special Offer Creative Poster",
+            id: "gf-poster-2",
+            title: "Poster 02",
             type: "image",
-            mediaUrl: "/assets/sad_platform.png",
-            category: "Posters & Offers",
-            description: "Visual promo poster for seasonal menu specials."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Special offer poster creative for GOODFOOD.IN."
           },
           {
-            id: "gf-3",
-            title: "Dish Preparation Reel",
-            type: "video",
-            mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-            posterUrl: "/assets/brand_projects.png",
-            category: "Reels & Videos",
-            description: "Food preparation video clip for high engagement."
+            id: "gf-poster-3",
+            title: "Poster 03",
+            type: "image",
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Menu showcase poster for GOODFOOD.IN."
           }
         ]
       },
@@ -216,29 +214,28 @@ export const workCategories = [
         ],
         gallery: [
           {
-            id: "fd-1",
-            title: "Instagram Profile Screenshot",
+            id: "fd-poster-1",
+            title: "Poster 01",
             type: "image",
-            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494931/mega.jpg",
-            category: "Profile Screenshot",
-            description: "Clean organic brand profile setup for FRESHDROP_OILS."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Product benefit poster for FRESHDROP_OILS."
           },
           {
-            id: "fd-2",
-            title: "Product Benefit Infographic Poster",
+            id: "fd-poster-2",
+            title: "Poster 02",
             type: "image",
-            mediaUrl: "/assets/rh_experiments.png",
-            category: "Brand Creatives",
-            description: "Product photography and benefit visual poster."
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Organic coconut oil promotional creative."
           },
           {
-            id: "fd-3",
-            title: "Natural Origin Brand Reel",
-            type: "video",
-            mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutback.mp4",
-            posterUrl: "/assets/facebook_projects.png",
-            category: "Reels & Videos",
-            description: "Natural sourcing and purity campaign video."
+            id: "fd-poster-3",
+            title: "Poster 03",
+            type: "image",
+            mediaUrl: "/assets/brand_projects.png", // Provide link in next chat
+            category: "Poster Design",
+            description: "Branded visual poster for FRESHDROP_OILS."
           }
         ]
       }
