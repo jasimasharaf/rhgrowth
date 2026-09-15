@@ -199,8 +199,8 @@ export const workCategories = [
         ]
       },
       {
-        id: "fresh-drops",
-        title: "FRESH DROPS COCONUT OILS",
+        id: "freshdrop_oils",
+        title: "FRESHDROP_OILS",
         category: "Coconut Oil",
         tagline: "An Instagram profile concept created for a coconut oil brand.",
         profileScreenshot: "/assets/facebook_projects.png",
@@ -221,7 +221,7 @@ export const workCategories = [
             type: "image",
             mediaUrl: "/assets/facebook_projects.png",
             category: "Profile Screenshot",
-            description: "Clean organic brand profile setup for FRESH DROPS COCONUT OILS."
+            description: "Clean organic brand profile setup for FRESHDROP_OILS."
           },
           {
             id: "fd-2",
