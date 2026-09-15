@@ -223,7 +223,7 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
 
         .screenshot-frame {
           width: 100%;
-          max-height: 520px;
+          max-height: 780px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -236,7 +236,7 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
 
         .screenshot-img-contain {
           max-width: 100%;
-          max-height: 480px;
+          max-height: 720px;
           object-fit: contain; /* Preserves natural proportions, zero distortion/cropping */
           display: block;
           border-radius: var(--radius-sm);

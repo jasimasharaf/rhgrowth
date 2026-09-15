@@ -100,8 +100,12 @@ export default function Portfolio({ onOpenContact }) {
               {socialMgmtCategory.projects && socialMgmtCategory.projects.map((project) => (
                 <div key={project.id} className="insta-project-card glass-card">
                   
-                  {/* Uncropped, Properly Framed Screenshot Container */}
-                  <div className="card-screenshot-wrapper">
+                  {/* Uncropped, Full-Height Framed Screenshot Container */}
+                  <div 
+                    className="card-screenshot-wrapper"
+                    onClick={() => setSelectedProject(project)}
+                    title="Click to view full screenshot"
+                  >
                     <img 
                       src={project.profileScreenshot} 
                       alt={`${project.title} Instagram Profile Screenshot`} 
@@ -276,10 +280,10 @@ export default function Portfolio({ onOpenContact }) {
           transform: translateY(-4px);
         }
 
-        /* Natural, Uncropped Screenshot Wrapper */
+        /* Natural, Uncropped Full Screenshot Wrapper */
         .card-screenshot-wrapper {
           width: 100%;
-          height: 280px;
+          height: 580px;
           background: #04090a;
           border-radius: calc(var(--radius-md) - 2px);
           overflow: hidden;
@@ -288,6 +292,7 @@ export default function Portfolio({ onOpenContact }) {
           justify-content: center;
           padding: 0.5rem;
           border: 1px solid var(--border-color);
+          cursor: pointer;
         }
 
         .card-screenshot-contain {
@@ -296,6 +301,11 @@ export default function Portfolio({ onOpenContact }) {
           object-fit: contain; /* Preserves exact proportions, zero cropping/stretching */
           display: block;
           border-radius: var(--radius-sm);
+          transition: transform 0.3s ease;
+        }
+
+        .card-screenshot-wrapper:hover .card-screenshot-contain {
+          transform: scale(1.02);
         }
 
         .card-project-body {
