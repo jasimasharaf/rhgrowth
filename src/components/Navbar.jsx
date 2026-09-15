@@ -25,7 +25,7 @@ export default function Navbar({ onOpenContact }) {
         <nav className="nav-links desktop-only">
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#work">Our Work</a>
+          <a href="#work">Our Works</a>
           <a href="#process">How We Work</a>
         </nav>
 
@@ -52,7 +52,7 @@ export default function Navbar({ onOpenContact }) {
           <nav className="mobile-nav-links">
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
-            <a href="#work" onClick={() => setMobileMenuOpen(false)}>Our Work</a>
+            <a href="#work" onClick={() => setMobileMenuOpen(false)}>Our Works</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)}>How We Work</a>
             <button 
               onClick={() => { setMobileMenuOpen(false); onOpenContact(); }} 

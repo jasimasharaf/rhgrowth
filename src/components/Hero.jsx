@@ -24,7 +24,7 @@ export default function Hero({ onOpenContact }) {
 
           <div className="hero-actions">
             <a href="#work" className="btn-primary">
-              <span>View Our Work</span>
+              <span>View Our Works</span>
               <ArrowDown size={18} />
             </a>
             <button onClick={onOpenContact} className="btn-secondary">

@@ -32,7 +32,7 @@ export default function Footer({ onOpenContact }) {
             <ul className="footer-nav-list">
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#work">Our Work</a></li>
+              <li><a href="#work">Our Works</a></li>
               <li><a href="#process">How We Work</a></li>
             </ul>
           </div>

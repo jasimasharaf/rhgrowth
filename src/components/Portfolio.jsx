@@ -20,10 +20,10 @@ export default function Portfolio({ onOpenContact }) {
         <div className="section-header text-center">
           <div className="badge mb-3">
             <Layers size={14} />
-            <span>Our Work</span>
+            <span>Our Works</span>
           </div>
           <h2 className="section-title">
-            Our <span className="text-teal">Work</span>
+            Our <span className="text-teal">Works</span>
           </h2>
           <p className="section-subtitle">
             Real projects. Real execution. Continuous learning. Explore our social media management and creative execution.
