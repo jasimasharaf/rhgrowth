@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
 import { workCategories } from '../data/portfolioData';
 import WorkGalleryModal from './WorkGalleryModal';
-import { ArrowRight, Layers, Sparkles, Video } from 'lucide-react';
+import { ArrowRight, Layers, Sparkles, Video, ChevronRight } from 'lucide-react';
 import { InstagramIcon } from './BrandIcons';
 
 export default function Portfolio({ onOpenContact }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  // Helper icons for the 3 main cards
-  const getCardIcon = (id) => {
-    switch(id) {
-      case 'creative-work':
-        return <Sparkles size={28} className="card-header-icon text-teal" />;
-      case 'realtime-work':
-        return <Video size={28} className="card-header-icon text-teal" />;
-      case 'social-media-management':
-        return <InstagramIcon size={28} className="card-header-icon text-teal" />;
-      default:
-        return <Layers size={28} className="card-header-icon text-teal" />;
-    }
-  };
+  const creativeCategory = workCategories.find(c => c.id === 'creative-work');
+  const realtimeCategory = workCategories.find(c => c.id === 'realtime-work');
+  const socialMgmtCategory = workCategories.find(c => c.id === 'social-media-management');
 
   return (
     <section id="work" className="section portfolio-section">
       <div className="container">
+        
+        {/* Section Header */}
         <div className="section-header text-center">
           <div className="badge mb-3">
             <Layers size={14} />
@@ -33,48 +26,119 @@ export default function Portfolio({ onOpenContact }) {
             Our <span className="text-teal">Work</span>
           </h2>
           <p className="section-subtitle">
-            Real projects. Real execution. Continuous learning. Explore our three main pillars of social media execution.
+            Real projects. Real execution. Continuous learning. Explore our social media management and creative execution.
           </p>
         </div>
 
-        {/* 3 MAIN CARDS ONLY */}
-        <div className="three-cards-grid">
-          {workCategories.map((cat) => (
-            <div key={cat.id} className="main-work-card glass-card">
+        {/* ---------------- 1 & 2. CREATIVE WORK & REAL-TIME WORK (Top Grid) ---------------- */}
+        <div className="top-categories-grid mb-5">
+          {/* CREATIVE WORK */}
+          {creativeCategory && (
+            <div className="main-work-card glass-card">
               <div className="card-visual-wrapper">
-                <img src={cat.coverImage} alt={cat.title} className="card-cover-img" />
+                <img src={creativeCategory.coverImage} alt={creativeCategory.title} className="card-cover-img" />
                 <div className="card-cover-gradient"></div>
-                <div className="card-badge-tag">{cat.badge}</div>
+                <div className="card-badge-tag">{creativeCategory.badge}</div>
               </div>
-
               <div className="card-body-content">
                 <div className="card-icon-row">
-                  {getCardIcon(cat.id)}
-                  <h3 className="work-card-title">{cat.title}</h3>
+                  <Sparkles size={24} className="text-teal" />
+                  <h3 className="work-card-title">{creativeCategory.title}</h3>
                 </div>
-
-                <p className="work-card-description">{cat.description}</p>
-
-                <div className="card-footer-action">
-                  <button 
-                    onClick={() => setSelectedCategory(cat)} 
-                    className="btn-primary w-full view-work-btn"
-                  >
-                    <span>View Work</span>
-                    <ArrowRight size={16} />
-                  </button>
-                </div>
+                <p className="work-card-description">{creativeCategory.description}</p>
+                <button 
+                  onClick={() => setSelectedCategory(creativeCategory)} 
+                  className="btn-primary w-full view-work-btn"
+                >
+                  <span>View Work</span>
+                  <ArrowRight size={16} />
+                </button>
               </div>
             </div>
-          ))}
+          )}
+
+          {/* REAL-TIME WORK */}
+          {realtimeCategory && (
+            <div className="main-work-card glass-card">
+              <div className="card-visual-wrapper">
+                <img src={realtimeCategory.coverImage} alt={realtimeCategory.title} className="card-cover-img" />
+                <div className="card-cover-gradient"></div>
+                <div className="card-badge-tag">{realtimeCategory.badge}</div>
+              </div>
+              <div className="card-body-content">
+                <div className="card-icon-row">
+                  <Video size={24} className="text-teal" />
+                  <h3 className="work-card-title">{realtimeCategory.title}</h3>
+                </div>
+                <p className="work-card-description">{realtimeCategory.description}</p>
+                <button 
+                  onClick={() => setSelectedCategory(realtimeCategory)} 
+                  className="btn-primary w-full view-work-btn"
+                >
+                  <span>View Work</span>
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
+
+        {/* ---------------- 3. SOCIAL MEDIA MANAGEMENT (Prominent Feature Section) ---------------- */}
+        {socialMgmtCategory && (
+          <div className="social-mgmt-prominent-box glass-card">
+            <div className="social-mgmt-header text-center mb-4">
+              <div className="badge mb-2">
+                <InstagramIcon size={14} />
+                <span>Core Agency Service</span>
+              </div>
+              <h3 className="social-mgmt-main-title">{socialMgmtCategory.title}</h3>
+              <p className="social-mgmt-main-subtitle">{socialMgmtCategory.subtitle}</p>
+            </div>
+
+            {/* THREE INSTAGRAM PROJECT CARDS */}
+            <div className="instagram-projects-grid">
+              {socialMgmtCategory.projects && socialMgmtCategory.projects.map((project) => (
+                <div key={project.id} className="insta-project-card glass-card">
+                  
+                  {/* Uncropped, Properly Framed Screenshot Container */}
+                  <div className="card-screenshot-wrapper">
+                    <img 
+                      src={project.profileScreenshot} 
+                      alt={`${project.title} Instagram Profile Screenshot`} 
+                      className="card-screenshot-contain"
+                    />
+                  </div>
+
+                  <div className="card-project-body">
+                    <div className="card-project-meta mb-2">
+                      <span className="project-cat-pill">{project.category}</span>
+                      <h4 className="project-card-name">{project.title}</h4>
+                    </div>
+
+                    <p className="project-card-tagline">{project.tagline}</p>
+
+                    <button 
+                      onClick={() => setSelectedProject(project)} 
+                      className="btn-primary w-full view-project-action-btn mt-auto"
+                    >
+                      <span>VIEW PROJECT</span>
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
       </div>
 
-      {/* Dedicated Gallery Modal */}
-      {selectedCategory && (
+      {/* Dedicated Gallery / Project Detail Modal */}
+      {(selectedCategory || selectedProject) && (
         <WorkGalleryModal 
           category={selectedCategory} 
-          onClose={() => setSelectedCategory(null)} 
+          selectedProject={selectedProject}
+          onClose={() => { setSelectedCategory(null); setSelectedProject(null); }} 
           onOpenContact={onOpenContact}
         />
       )}
@@ -84,11 +148,10 @@ export default function Portfolio({ onOpenContact }) {
           position: relative;
         }
 
-        .three-cards-grid {
+        .top-categories-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
-          margin-top: 1rem;
         }
 
         .main-work-card {
@@ -103,7 +166,7 @@ export default function Portfolio({ onOpenContact }) {
           position: relative;
           border-radius: calc(var(--radius-lg) - 4px);
           overflow: hidden;
-          aspect-ratio: 16 / 10;
+          aspect-ratio: 16 / 9;
           background: var(--bg-surface);
         }
 
@@ -116,7 +179,7 @@ export default function Portfolio({ onOpenContact }) {
         }
 
         .main-work-card:hover .card-cover-img {
-          transform: scale(1.05);
+          transform: scale(1.04);
         }
 
         .card-cover-gradient {
@@ -150,36 +213,138 @@ export default function Portfolio({ onOpenContact }) {
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.5rem;
         }
 
         .work-card-title {
           font-size: 1.35rem;
           font-weight: 800;
-          letter-spacing: -0.01em;
         }
 
         .work-card-description {
           font-size: 0.925rem;
           color: var(--text-secondary);
           line-height: 1.6;
-          margin-bottom: 1.75rem;
-        }
-
-        .card-footer-action {
-          margin-top: auto;
+          margin-bottom: 1.5rem;
         }
 
         .view-work-btn {
-          width: 100%;
-          justify-content: center;
+          margin-top: auto;
           padding: 0.8rem 1.25rem;
         }
 
+        /* Prominent Social Media Management Feature Box */
+        .social-mgmt-prominent-box {
+          padding: 3rem 2.25rem;
+          background: linear-gradient(180deg, rgba(14, 28, 31, 0.85) 0%, rgba(8, 16, 18, 0.95) 100%);
+          border: 1px solid var(--border-glow);
+          position: relative;
+        }
+
+        .social-mgmt-main-title {
+          font-size: 2.25rem;
+          margin-bottom: 0.35rem;
+          letter-spacing: -0.02em;
+        }
+
+        .social-mgmt-main-subtitle {
+          font-size: 1.1rem;
+          color: var(--text-secondary);
+          max-width: 680px;
+          margin: 0 auto;
+        }
+
+        /* 3 Instagram Project Cards Grid */
+        .instagram-projects-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.75rem;
+          margin-top: 2rem;
+        }
+
+        .insta-project-card {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          background: rgba(10, 20, 22, 0.85);
+          border: 1px solid var(--border-color);
+          transition: var(--transition);
+        }
+
+        .insta-project-card:hover {
+          border-color: var(--border-glow);
+          transform: translateY(-4px);
+        }
+
+        /* Natural, Uncropped Screenshot Wrapper */
+        .card-screenshot-wrapper {
+          width: 100%;
+          height: 280px;
+          background: #04090a;
+          border-radius: calc(var(--radius-md) - 2px);
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+          border: 1px solid var(--border-color);
+        }
+
+        .card-screenshot-contain {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain; /* Preserves exact proportions, zero cropping/stretching */
+          display: block;
+          border-radius: var(--radius-sm);
+        }
+
+        .card-project-body {
+          padding: 1.25rem 0.5rem 0.5rem 0.5rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        .project-cat-pill {
+          font-size: 0.725rem;
+          font-weight: 700;
+          color: var(--accent-teal);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 0.2rem;
+          display: block;
+        }
+
+        .project-card-name {
+          font-size: 1.35rem;
+          font-weight: 800;
+        }
+
+        .project-card-tagline {
+          font-size: 0.875rem;
+          color: var(--text-secondary);
+          line-height: 1.5;
+          margin-bottom: 1.5rem;
+        }
+
+        .view-project-action-btn {
+          padding: 0.75rem 1.25rem;
+          font-size: 0.875rem;
+          letter-spacing: 0.04em;
+        }
+
+        .mb-5 { margin-bottom: 2.5rem; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mt-auto { margin-top: auto; }
+        .w-full { width: 100%; }
+
         @media (max-width: 1024px) {
-          .three-cards-grid {
+          .top-categories-grid, .instagram-projects-grid {
             grid-template-columns: 1fr;
-            gap: 2rem;
+          }
+          .social-mgmt-prominent-box {
+            padding: 2rem 1.25rem;
           }
         }
       `}</style>
