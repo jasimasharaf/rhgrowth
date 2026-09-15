@@ -49,7 +49,7 @@ export default function Hero({ onOpenContact }) {
           <div className="founder-image-card glass-card">
             <div className="card-image-wrapper">
               <img 
-                src="https://res.cloudinary.com/zxszrucp/image/upload/v1789496151/WhatsApp_Image_2026-09-15_at_12.18.55_AM.jpg" 
+                src="https://res.cloudinary.com/zxszrucp/image/upload/v1789496445/WhatsApp_Image_2026-09-14_at_11.58.12_PM.jpg" 
                 alt="Co-founders of Team RusticHands and RH Growth.in" 
                 className="founder-img"
               />
