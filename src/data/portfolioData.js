@@ -203,7 +203,7 @@ export const workCategories = [
         title: "FRESHDROP_OILS",
         category: "Coconut Oil",
         tagline: "An Instagram profile concept created for a coconut oil brand.",
-        profileScreenshot: "/assets/facebook_projects.png",
+        profileScreenshot: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494931/mega.jpg",
         whatWeCreated: [
           "Instagram profile setup",
           "Product-focused profile presentation",
@@ -219,7 +219,7 @@ export const workCategories = [
             id: "fd-1",
             title: "Instagram Profile Screenshot",
             type: "image",
-            mediaUrl: "/assets/facebook_projects.png",
+            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789494931/mega.jpg",
             category: "Profile Screenshot",
             description: "Clean organic brand profile setup for FRESHDROP_OILS."
           },
