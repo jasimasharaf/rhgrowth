@@ -3,49 +3,63 @@
  * Cloudinary Media Ready
  * 
  * Replace image/video URLs with your Cloudinary asset URLs:
- * e.g., "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/techhouse_profile.jpg"
+ * e.g., "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/creative1.jpg"
+ * e.g., "https://res.cloudinary.com/your-cloud-name/video/upload/v1234567890/vfx_promo.mp4"
  */
 
 export const workCategories = [
   {
     id: "creative-work",
-    title: "CREATIVE WORK",
-    badge: "Design & Animation",
-    description: "Posters, social media creatives, animated designs and promotional content created by our team.",
+    title: "CREATIVE PRODUCTION",
+    badge: "Visual Production",
+    subtitle: "Professional visual content created for businesses and brands.",
+    description: "From motion graphics and animated videos to VFX, promotional content and professional social media creatives, we create visual content designed to help businesses communicate their ideas effectively.",
+    introText: "From motion graphics and animated videos to VFX, promotional content and professional social media creatives, we create visual content designed to help businesses communicate their ideas effectively.",
     coverImage: "/assets/brand_projects.png",
+    capabilities: [
+      "Animated Videos",
+      "Motion Graphics",
+      "VFX & Visual Effects",
+      "Promotional Videos",
+      "Professional Social Media Posts",
+      "YouTube Animated Content",
+      "Business Promotional Creatives",
+      "Branded Visual Content"
+    ],
     items: [
       {
-        id: "cw-1",
-        title: "Social Media Campaign Poster",
-        type: "image",
-        mediaUrl: "/assets/brand_projects.png",
-        category: "Posters",
-        description: "Custom graphic poster design for social media promotional campaign."
+        id: "cp-1",
+        title: "Motion Graphics & Visual Effects",
+        type: "video",
+        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", // Cloudinary MP4 URL
+        category: "Motion Graphics & VFX",
+        posterUrl: "/assets/brand_projects.png",
+        description: "Professional motion graphics video design created for brand communication."
       },
       {
-        id: "cw-2",
-        title: "Animated Motion Creative",
+        id: "cp-2",
+        title: "Business Promotional Creative",
         type: "image",
-        mediaUrl: "/assets/instagram_projects.png",
-        category: "Animated Designs",
-        description: "Motion graphic design built for high-engagement social posts."
+        mediaUrl: "/assets/brand_projects.png", // Cloudinary Image URL
+        category: "Promotional Creatives",
+        description: "High-contrast visual design poster built for social media campaigns."
       },
       {
-        id: "cw-3",
-        title: "Brand Identity Design Suite",
+        id: "cp-3",
+        title: "YouTube Animated Content Showcase",
+        type: "video",
+        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        category: "Animated Videos",
+        posterUrl: "/assets/instagram_projects.png",
+        description: "Animated video content designed for digital channels and brand awareness."
+      },
+      {
+        id: "cp-4",
+        title: "Branded Social Media Post Suite",
         type: "image",
         mediaUrl: "/assets/sad_platform.png",
-        category: "Social Media Designs",
-        description: "Cohesive visual layout and graphic asset kit for business branding."
-      },
-      {
-        id: "cw-4",
-        title: "Promotional Creative Video",
-        type: "video",
-        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        category: "Creative Videos",
-        posterUrl: "/assets/rh_experiments.png",
-        description: "Short-form promotional video creative designed with sound and visual motion."
+        category: "Social Media Posts",
+        description: "Clean aesthetic post layout designed for corporate communication."
       }
     ]
   },
@@ -99,7 +113,7 @@ export const workCategories = [
         title: "TECHHOUSE.IN",
         category: "Electronics",
         tagline: "An Instagram profile concept created for an electronics and appliance business.",
-        profileScreenshot: "/assets/instagram_projects.png", // Paste Cloudinary URL here
+        profileScreenshot: "/assets/instagram_projects.png",
         whatWeCreated: [
           "Instagram profile setup",
           "Professional profile presentation",
@@ -116,7 +130,7 @@ export const workCategories = [
             id: "th-1",
             title: "Instagram Profile Screenshot & Grid",
             type: "image",
-            mediaUrl: "/assets/instagram_projects.png", // Paste Cloudinary URL
+            mediaUrl: "/assets/instagram_projects.png",
             category: "Profile Screenshot",
             description: "Full Instagram page presentation for TECHHOUSE.IN."
           },
@@ -144,7 +158,7 @@ export const workCategories = [
         title: "GOODFOOD.IN",
         category: "Food",
         tagline: "An Instagram profile concept created for a food business.",
-        profileScreenshot: "/assets/brand_projects.png", // Paste Cloudinary URL here
+        profileScreenshot: "/assets/brand_projects.png",
         whatWeCreated: [
           "Instagram profile setup",
           "Professional profile presentation",
@@ -189,7 +203,7 @@ export const workCategories = [
         title: "FRESH DROPS COCONUT OILS",
         category: "Coconut Oil",
         tagline: "An Instagram profile concept created for a coconut oil brand.",
-        profileScreenshot: "/assets/facebook_projects.png", // Paste Cloudinary URL here
+        profileScreenshot: "/assets/facebook_projects.png",
         whatWeCreated: [
           "Instagram profile setup",
           "Product-focused profile presentation",

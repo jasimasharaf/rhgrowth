@@ -117,37 +117,58 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
             </div>
           )}
 
-          {/* ---------------- STANDARD CATEGORY GALLERY (Creative Work & Real-Time Work) ---------------- */}
+          {/* ---------------- STANDARD CATEGORY GALLERY (Creative Production & Real-Time Work) ---------------- */}
           {!isProjectView && category?.items && (
-            <div className="media-grid">
-              {category.items.map((item, idx) => (
-                <div key={item.id || idx} className="media-card glass-card">
-                  <div className="media-preview-box">
-                    {item.type === 'video' ? (
-                      <VideoPlayer 
-                        src={item.mediaUrl} 
-                        poster={item.posterUrl || category.coverImage}
-                        title={item.title}
-                      />
-                    ) : (
-                      <div className="image-lightbox-trigger" onClick={() => setLightboxMedia(item)}>
-                        <img src={item.mediaUrl} alt={item.title} className="gallery-img-cover" />
-                        <div className="image-hover-overlay">
-                          <span className="expand-pill">
-                            <ImageIcon size={14} /> View Full Image
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="media-card-info">
-                    <span className="media-category-pill">{item.category}</span>
-                    <h4 className="media-item-title">{item.title}</h4>
-                    <p className="media-item-desc">{item.description}</p>
-                  </div>
+            <div className="standard-category-view">
+              
+              {/* Introduction Box for Creative Production */}
+              {category.introText && (
+                <div className="category-intro-box glass-card mb-4">
+                  <p className="category-intro-p">{category.introText}</p>
+                  
+                  {category.capabilities && (
+                    <div className="capabilities-pills-row mt-3">
+                      {category.capabilities.map((cap, i) => (
+                        <span key={i} className="capability-pill">
+                          <Check size={12} className="text-teal" />
+                          <span>{cap}</span>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              ))}
+              )}
+
+              <div className="media-grid">
+                {category.items.map((item, idx) => (
+                  <div key={item.id || idx} className="media-card glass-card">
+                    <div className="media-preview-box">
+                      {item.type === 'video' ? (
+                        <VideoPlayer 
+                          src={item.mediaUrl} 
+                          poster={item.posterUrl || category.coverImage}
+                          title={item.title}
+                        />
+                      ) : (
+                        <div className="image-lightbox-trigger" onClick={() => setLightboxMedia(item)}>
+                          <img src={item.mediaUrl} alt={item.title} className="gallery-img-cover" />
+                          <div className="image-hover-overlay">
+                            <span className="expand-pill">
+                              <ImageIcon size={14} /> View Full Image
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="media-card-info">
+                      <span className="media-category-pill">{item.category}</span>
+                      <h4 className="media-item-title">{item.title}</h4>
+                      <p className="media-item-desc">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
@@ -478,6 +499,39 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
           background: rgba(6, 13, 15, 0.95);
         }
 
+        .category-intro-box {
+          padding: 1.5rem 1.75rem;
+          background: rgba(14, 28, 31, 0.85);
+          border: 1px solid var(--border-glow);
+        }
+
+        .category-intro-p {
+          font-size: 1rem;
+          color: var(--text-primary);
+          line-height: 1.6;
+          font-weight: 500;
+        }
+
+        .capabilities-pills-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.6rem;
+        }
+
+        .capability-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          font-size: 0.775rem;
+          padding: 0.3rem 0.7rem;
+          background: rgba(45, 212, 191, 0.08);
+          border: 1px solid rgba(45, 212, 191, 0.22);
+          border-radius: var(--radius-full);
+          color: var(--accent-teal);
+          font-weight: 600;
+        }
+
+        .mt-3 { margin-top: 1rem; }
         .mb-4 { margin-bottom: 1.5rem; }
         .mb-3 { margin-bottom: 1rem; }
 
