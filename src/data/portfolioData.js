@@ -113,7 +113,7 @@ export const workCategories = [
         title: "TECHHOUSE.IN",
         category: "Electronics",
         tagline: "An Instagram profile concept created for an electronics and appliance business.",
-        profileScreenshot: "/assets/instagram_projects.png",
+        profileScreenshot: "https://res.cloudinary.com/zxszrucp/image/upload/v1789495555/WhatsApp_Image_2026-09-15_at_9.57.23_AM.jpg",
         whatWeCreated: [
           "Instagram profile setup",
           "Professional profile presentation",
@@ -130,7 +130,7 @@ export const workCategories = [
             id: "th-1",
             title: "Instagram Profile Screenshot & Grid",
             type: "image",
-            mediaUrl: "/assets/instagram_projects.png",
+            mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789495555/WhatsApp_Image_2026-09-15_at_9.57.23_AM.jpg",
             category: "Profile Screenshot",
             description: "Full Instagram page presentation for TECHHOUSE.IN."
           },
