@@ -69,51 +69,6 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
                   ))}
                 </div>
               </div>
-
-              {/* 3. OUR WORK Media Gallery */}
-              <div className="our-work-gallery-section">
-                <div className="our-work-header mb-3">
-                  <h3 className="our-work-main-title">OUR WORK</h3>
-                  <p className="our-work-sub">
-                    Posters, Instagram screenshots, social media creatives, animated designs, reels & videos.
-                  </p>
-                </div>
-
-                <div className="our-work-media-grid">
-                  {activeProject.gallery && activeProject.gallery.map((media, idx) => (
-                    <div key={media.id || idx} className="our-work-media-card glass-card">
-                      <div className="media-frame">
-                        {media.type === 'video' ? (
-                          <VideoPlayer 
-                            src={media.mediaUrl} 
-                            poster={media.posterUrl || activeProject.profileScreenshot}
-                            title={media.title}
-                          />
-                        ) : (
-                          <div 
-                            className="image-lightbox-trigger"
-                            onClick={() => setLightboxMedia(media)}
-                          >
-                            <img src={media.mediaUrl} alt={media.title} className="gallery-img-contain" />
-                            <div className="image-hover-overlay">
-                              <span className="expand-pill">
-                                <ImageIcon size={14} /> View Full Image
-                              </span>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="media-meta">
-                        <span className="media-cat-badge">{media.category}</span>
-                        <h4 className="media-title">{media.title}</h4>
-                        <p className="media-desc">{media.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
             </div>
           )}
 
