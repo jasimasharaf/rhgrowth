@@ -68,7 +68,7 @@ export const workCategories = [
     title: "REAL-TIME WORK",
     badge: "Execution & Shoots",
     description: "Real-world promotional content and projects created and executed for businesses.",
-    coverImage: "/assets/sad_platform.png",
+    coverImage: "https://res.cloudinary.com/zxszrucp/image/upload/v1789499741/WhatsApp_Image_2026-09-16_at_12.43.57_AM.jpg",
     items: [
       {
         id: "rw-1",
@@ -76,14 +76,14 @@ export const workCategories = [
         type: "video",
         mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
         category: "Product Promotion Videos",
-        posterUrl: "/assets/sad_platform.png",
+        posterUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789499741/WhatsApp_Image_2026-09-16_at_12.43.57_AM.jpg",
         description: "Real-world product showcase video with audio commentary and feature highlights."
       },
       {
         id: "rw-2",
         title: "Commercial Product Shoot",
         type: "image",
-        mediaUrl: "/assets/sad_platform.png",
+        mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789499741/WhatsApp_Image_2026-09-16_at_12.43.57_AM.jpg",
         category: "Real-World Product Shoots",
         description: "High-resolution product photography and promotional asset creation."
       },
