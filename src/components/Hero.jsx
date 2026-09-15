@@ -58,7 +58,7 @@ export default function Hero({ onOpenContact }) {
             
             <div className="card-caption">
               <div className="caption-text">
-                <span className="caption-title">Founders & Leadership</span>
+                <span className="caption-title">Founders</span>
               </div>
             </div>
           </div>
