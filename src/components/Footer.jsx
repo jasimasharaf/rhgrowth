@@ -35,7 +35,6 @@ export default function Footer({ onOpenContact }) {
               <li><a href="#work">Our Work</a></li>
               <li><a href="#process">How We Work</a></li>
               <li><a href="#team">Leadership Team</a></li>
-              <li><a href="#why-us">Why RH Growth</a></li>
             </ul>
           </div>
 
