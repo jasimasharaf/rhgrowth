@@ -5,7 +5,6 @@ import About from './components/About';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Process from './components/Process';
-import Team from './components/Team';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
@@ -26,7 +25,6 @@ export default function App() {
         <Services />
         <Portfolio onOpenContact={handleOpenContact} />
         <Process />
-        <Team onOpenContact={handleOpenContact} />
         <CTA onOpenContact={handleOpenContact} />
       </main>
 
