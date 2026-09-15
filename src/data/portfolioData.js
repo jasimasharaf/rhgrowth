@@ -15,7 +15,7 @@ export const workCategories = [
     subtitle: "Professional visual content created for businesses and brands.",
     description: "From motion graphics and animated videos to VFX, promotional content and professional social media creatives, we create visual content designed to help businesses communicate their ideas effectively.",
     introText: "From motion graphics and animated videos to VFX, promotional content and professional social media creatives, we create visual content designed to help businesses communicate their ideas effectively.",
-    coverImage: "/assets/brand_projects.png",
+    coverImage: "https://res.cloudinary.com/zxszrucp/image/upload/v1789500665/WhatsApp_Image_2026-09-16_at_1.00.32_AM.jpg",
     capabilities: [
       "Animated Videos",
       "Motion Graphics",
@@ -33,14 +33,14 @@ export const workCategories = [
         type: "video",
         mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", // Cloudinary MP4 URL
         category: "Motion Graphics & VFX",
-        posterUrl: "/assets/brand_projects.png",
+        posterUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789500665/WhatsApp_Image_2026-09-16_at_1.00.32_AM.jpg",
         description: "Professional motion graphics video design created for brand communication."
       },
       {
         id: "cp-2",
         title: "Business Promotional Creative",
         type: "image",
-        mediaUrl: "/assets/brand_projects.png", // Cloudinary Image URL
+        mediaUrl: "https://res.cloudinary.com/zxszrucp/image/upload/v1789500665/WhatsApp_Image_2026-09-16_at_1.00.32_AM.jpg", // Cloudinary Image URL
         category: "Promotional Creatives",
         description: "High-contrast visual design poster built for social media campaigns."
       },
