@@ -495,7 +495,53 @@ export default function WorkGalleryModal({ category, selectedProject, onClose, o
             grid-template-columns: 1fr;
           }
           .gallery-modal-card {
-            max-height: 95vh;
+            max-height: 94vh;
+            border-radius: var(--radius-md);
+          }
+          .gallery-modal-header {
+            padding: 1.25rem 1.25rem 1rem 1.25rem;
+          }
+          .gallery-modal-title {
+            font-size: 1.5rem;
+          }
+          .gallery-modal-body {
+            padding: 1.25rem 1rem;
+          }
+          .profile-screenshot-hero-box {
+            padding: 0.85rem;
+            margin-bottom: 1.25rem;
+          }
+          .screenshot-frame {
+            max-height: 52vh;
+            padding: 0.5rem;
+          }
+          .screenshot-img-contain {
+            max-height: 48vh;
+          }
+          .gallery-modal-footer {
+            padding: 1rem 1.25rem;
+            flex-direction: column;
+            gap: 0.6rem;
+          }
+          .gallery-modal-footer button {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .gallery-modal-title {
+            font-size: 1.3rem;
+          }
+          .what-we-created-box {
+            padding: 1.15rem 0.85rem;
+          }
+          .section-block-title {
+            font-size: 1.15rem;
+            margin-bottom: 0.85rem;
+          }
+          .bullet-item {
+            font-size: 0.85rem;
           }
         }
       `}</style>

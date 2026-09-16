@@ -354,7 +354,35 @@ export default function Portfolio({ onOpenContact }) {
             grid-template-columns: 1fr;
           }
           .social-mgmt-prominent-box {
-            padding: 2rem 1.25rem;
+            padding: 2.25rem 1.5rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .social-mgmt-main-title {
+            font-size: 1.75rem;
+          }
+          .social-mgmt-main-subtitle {
+            font-size: 0.95rem;
+          }
+          .card-screenshot-wrapper {
+            height: 480px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .social-mgmt-prominent-box {
+            padding: 1.5rem 0.85rem;
+          }
+          .insta-project-card {
+            padding: 0.75rem;
+          }
+          .card-screenshot-wrapper {
+            height: 420px;
+            padding: 0.35rem;
+          }
+          .project-card-name {
+            font-size: 1.2rem;
           }
         }
       `}</style>

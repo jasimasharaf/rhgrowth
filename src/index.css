@@ -134,10 +134,12 @@ button {
   transition: var(--transition);
 }
 
-.glass-card:hover {
-  border-color: var(--border-glow);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-4px);
+@media (hover: hover) {
+  .glass-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+  }
 }
 
 /* Primary Button */
@@ -154,12 +156,19 @@ button {
   border-radius: var(--radius-full);
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(45, 212, 191, 0.25);
+  touch-action: manipulation;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(45, 212, 191, 0.4);
-  background: linear-gradient(135deg, #5eead4 0%, #14b8a6 100%);
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(45, 212, 191, 0.4);
+    background: linear-gradient(135deg, #5eead4 0%, #14b8a6 100%);
+  }
 }
 
 /* Secondary Button */
@@ -177,13 +186,20 @@ button {
   border-radius: var(--radius-full);
   backdrop-filter: blur(12px);
   transition: var(--transition);
+  touch-action: manipulation;
 }
 
-.btn-secondary:hover {
-  background: rgba(45, 212, 191, 0.1);
-  border-color: var(--accent-teal);
-  color: var(--accent-teal);
-  transform: translateY(-2px);
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) {
+  .btn-secondary:hover {
+    background: rgba(45, 212, 191, 0.1);
+    border-color: var(--accent-teal);
+    color: var(--accent-teal);
+    transform: translateY(-2px);
+  }
 }
 
 /* Glow Effect Backdrops */
@@ -202,14 +218,39 @@ button {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(4, 10, 11, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(4, 10, 11, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.25rem;
   animation: fadeIn 0.25s ease-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .section {
+    padding: 3.75rem 0;
+  }
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+  .modal-overlay {
+    padding: 0.5rem;
+  }
 }
 
 @keyframes fadeIn {
